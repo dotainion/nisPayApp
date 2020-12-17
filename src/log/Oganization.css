@@ -1,0 +1,35 @@
+.oganization-main-container{
+    
+}
+.oganization-sub-container{
+    padding-left: 10px;
+    padding-right: 10px;
+    --ion-background-color: var(--nis-color);
+}
+.oganization-header{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.oganization-sub-header{
+    color: navy;
+    font-size: 18px;
+}
+.oganization-input{
+    margin-bottom: 10px;
+    --ion-background-color: white;
+}
+.oganizaton-link-button-container{
+    position: relative;
+}
+.oganizaton-create-account{
+    color: white;
+}
+.oganizaton-recover-account{
+    color: white;
+    float: right;
+}
+.oganization-hover:hover{
+    color: navy;
+    text-decoration: underline;
+}

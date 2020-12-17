@@ -1,5 +1,3 @@
-import Menu from './components/Menu';
-import Page from './pages/Page';
 import React from 'react';
 import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
@@ -24,8 +22,12 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const App: React.FC = () => {
+/* pages */
+import Menu from './components/Menu';
+import Page from './pages/Main';
+import Login from './log/Login';
 
+const App: React.FC = () => {
   return (
     <IonApp>
       <IonReactRouter>
@@ -36,6 +38,7 @@ const App: React.FC = () => {
             <Redirect from="/" to="/page/Inbox" exact />
           </IonRouterOutlet>
         </IonSplitPane>
+        <Route path="/login" component={Login} exact />
       </IonReactRouter>
     </IonApp>
   );

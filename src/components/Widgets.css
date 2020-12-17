@@ -1,0 +1,25 @@
+/* for UserInfo */
+.user-info-main-container{
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+.user-info-content{
+    color: blue;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px 2px lightgray;
+}
+
+/* for NISLogo */
+.nis-logo-main-container{
+    
+}
+.nis-logo{
+    border-radius: 50%;
+    background-color: white;
+}

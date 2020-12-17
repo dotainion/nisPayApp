@@ -1,0 +1,12 @@
+.bottom-info-main-container{
+    user-select: none;
+    --ion-background-color: white;
+}
+.bottom-info-link{
+    color: navy;
+    margin-right: 10px;
+}
+.bottom-info-hover:hover{
+    color: gray;
+    text-decoration: underline;
+}

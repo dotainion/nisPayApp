@@ -1,0 +1,43 @@
+
+.main{
+    --ion-background-color: rgb(166, 194, 183);
+}
+.login-grid{
+    position: relative;
+    top: 10%;
+}
+.login-main-container{
+    position: relative;
+    border: 1px solid lightgray;
+    user-select: none;
+    padding-bottom: 20px;
+    height: auto;
+    --ion-background-color: white;
+}
+.login-header{
+    text-align: center;
+    font-size: 23px;
+    padding-top: 20px;
+    color: rgb(41, 5, 109);
+    font-weight: bold;
+}
+.login-button{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: navy;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    --ion-background-color: rgb(169, 202, 206);
+}
+.login-hover:hover{
+    color: navy;
+    --ion-background-color: lightgray;
+}
+.login-logo-container{
+    position: absolute;
+    width: 300px;
+    top: 10%;
+    left: 15%;
+    --Ion-background-color: red;
+}

@@ -1,9 +1,10 @@
 .bottom-info-main-container{
     user-select: none;
-    --ion-background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .bottom-info-link{
-    color: navy;
+    color: black;
     margin-right: 10px;
 }
 .bottom-info-hover:hover{

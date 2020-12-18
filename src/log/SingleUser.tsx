@@ -1,10 +1,13 @@
 import { IonButton, IonCard, IonInput, IonItem, IonLabel, IonList } from '@ionic/react';
 import React from 'react';
+import { useHistory } from 'react-router';
+import { urlRouts } from '../global/Routes';
 import './SingleUser.css'
 
 
 
 export const SingleUser = (props:any) =>{
+    const history = useHistory();
     return(
         <IonList hidden={!props.state} class="single-user-main-container">
             <IonCard className="single-user-sub-container">
@@ -17,7 +20,9 @@ export const SingleUser = (props:any) =>{
                     <IonInput/>
                 </IonItem>
                 <IonItem>
-                    <IonButton color="light" slot="end">Login</IonButton>
+                    <IonButton color="light" slot="end" onClick={()=>{
+                        history.push(urlRouts.singleUser)
+                    }}>Login</IonButton>
                 </IonItem>
             </IonCard>
         </IonList>

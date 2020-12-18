@@ -1,0 +1,95 @@
+.all-payout-container{
+    display: flex;
+    margin-left: 10px;
+    user-select: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+.all-payout-list-header{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.all-payout-member-list-container{
+    width: 50%;
+}
+.all-payout-member-list{
+    height: 70vh;
+    overflow: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid gray;
+}
+.all-payout-payment-container{
+    width: 50px;
+}
+.all-payment-delete{
+    color: orangered;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.all-payment-edit{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #3880ff;
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: white;
+}
+.all-payment-edit-inputs{
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    background-color: white;
+}
+.all-payment-save-button{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 4px lightgray;
+    background-color: #3880ff;
+}
+.all-payment-name-inputs{
+    width: 60%;
+    height: 34px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    background-color: skyblue;
+}
+.all-payment-amount-inputs{
+    width: 20%;
+    height: 34px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    background-color: skyblue;
+}
+.all-payment-name{
+    width: 80%;
+    border: none;
+    background-color: inherit;
+}
+.all-payment-amount{
+    width: 20%;
+    float: right;
+    border: none;
+    background-color: inherit;
+}
+.all-payment-checkbox{
+    position: absolute;
+    right: 0;
+}
+.all-payout-hover:hover{
+    cursor: pointer;
+    background-color: lightgray;
+    --ion-background-color: lightgray;
+}
+.all-payout-focus:focus{
+    outline: none;
+}
+
+

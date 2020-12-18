@@ -1,14 +1,14 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React, { useEffect } from 'react';
 import { useHistory, useParams } from 'react-router';
-import './Page.css';
+import './Member.css';
 
-const NISPay: React.FC = () => {
+const SingleUser: React.FC = () => {
   const history = useHistory();
   const { name } = useParams<{ name: string; }>();
 
   useEffect(()=>{
-    if (true) history.push("/login");
+    //if (true) history.push("/login");
   })
   return (
     <IonPage>
@@ -28,4 +28,4 @@ const NISPay: React.FC = () => {
   );
 };
 
-export default NISPay;
+export default SingleUser;

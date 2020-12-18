@@ -76,7 +76,8 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-tint: #f5f6f9;
 
   /** customer colors **/
-  --nis-color: rgb(20, 135, 150);
+  --nis-color: rgb(13, 58, 102);
+  --nis-bg-color: rgb(86, 109, 131);
 }
 
 @media (prefers-color-scheme: dark) {

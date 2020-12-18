@@ -12,17 +12,20 @@ const Login: React.FC = () => {
   const [oganizationInfo, setOganizationInfo] = useState(false);
   const [nisNumberInfo, setNisNumberInfo] = useState(false);
   const [loginSwitch, setLoginSwitch] = useState({
-    oganization: false,
-    singleuser: false,
-    oganizationBg: "light",
-    singleuserBg: "light"
+    oganization: true,
+    singleuser: true
+  });
+  const [ogLoginOrCreate, setOgLoginOrCreate] = useState({
+    login: true,
+    create: false,
+    recover: false
   });
 
   const infoOganization = "oganization can make payment by adding employee to an account";
   const infoNISnumber = "You'll be able to make payment towards you NIS account";
   return (
     <IonPage className="main">
-      <IonContent fullscreen>
+      <IonContent>
         <IonList class="login-logo-container">
           <NISLogo/>
         </IonList>
@@ -34,16 +37,29 @@ const Login: React.FC = () => {
                   <IonLabel>Welcome to the National Insurance Scheme Grenada</IonLabel>
                 </IonList>
                 <IonItemDivider/>
-                <SingleUser state={loginSwitch.singleuser}/>
-                <Oganization state={loginSwitch.oganization}/>
-                <div hidden={!loginSwitch.oganizationBg} style={{position:"relative"}}>
+
+                <SingleUser 
+                  state={!loginSwitch.singleuser}
+                />
+                <Oganization 
+                  set={(ogLogin:boolean,ogCreate:boolean,ogRecover:boolean)=>{
+                    setOgLoginOrCreate({
+                      login: ogLogin,
+                      create: ogCreate,
+                      recover: ogRecover
+                    });
+                  }}
+                  state={!loginSwitch.oganization}
+                  login={ogLoginOrCreate.login}
+                  create={ogLoginOrCreate.create}
+                  recover={ogLoginOrCreate.recover}
+                />
+                <div hidden={!loginSwitch.oganization} style={{position:"relative"}}>
                   <IonItem onClick={()=>{
                     setLoginSwitch({
-                      oganization: true,
-                      singleuser: false,
-                      oganizationBg: "",
-                      singleuserBg: "primary"
-                    })
+                      oganization: false,
+                      singleuser: true
+                    });
                   }} className="login-button login-hover">
                     <IonLabel>Oganization</IonLabel>
                     <IonIcon onMouseOver={()=>{
@@ -55,14 +71,12 @@ const Login: React.FC = () => {
                   </IonItem>
                   <UserInfo state={oganizationInfo} msg={infoOganization}/>
                 </div>
-                <div hidden={!loginSwitch.singleuserBg} style={{position:"relative"}}>
+                <div hidden={!loginSwitch.singleuser} style={{position:"relative"}}>
                   <IonItem onClick={()=>{
                     setLoginSwitch({
-                      oganization: false,
-                      singleuser: true,
-                      oganizationBg: "primary",
-                      singleuserBg: ""
-                    })
+                      oganization: true,
+                      singleuser: false
+                    });
                   }} className="login-button login-hover">
                     <IonLabel>Login with my NIS number</IonLabel>
                     <IonIcon onMouseOver={()=>{

@@ -3,6 +3,7 @@ import { addSharp, calculatorSharp, calendarSharp, cardOutline, cardSharp, notif
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import Menu from '../../components/Menu';
+import { urlRouts } from '../../global/Routes';
 import AllPayout from './AllPayout';
 import MemberPayout from './MemberPayout';
 import './Oganization.css';
@@ -33,13 +34,16 @@ const Oganization: React.FC = () => {
   ];
   
   return (
-    <IonPage>
+    <IonPage className="oganization-main-conatainer">
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
           <IonTitle>NIS Payment</IonTitle>
+          <IonTitle slot="end" onClick={()=>{
+            history.push(urlRouts.login);
+          }}>Sign Out</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonSplitPane contentId="main" class="oganization-splitpane">

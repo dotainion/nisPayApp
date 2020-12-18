@@ -1,3 +1,6 @@
+.oganization-main-conatainer{
+    user-select: none;
+}
 .oganization-splitpane{
     margin-top: 55px;
 }

@@ -1,10 +1,12 @@
 import { IonButtons, IonCard, IonCardContent, IonContent, IonHeader, IonList, IonMenuButton, IonPage, IonSplitPane, IonTitle, IonToolbar } from '@ionic/react';
-import { addSharp, calculatorSharp, calendarSharp, cardOutline, cardSharp, notificationsSharp } from 'ionicons/icons';
+import { addSharp, calculatorSharp, calendarSharp, cardOutline, cardSharp, notificationsSharp, peopleOutline, peopleSharp } from 'ionicons/icons';
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import Menu from '../../components/Menu';
 import { urlRouts } from '../../global/Routes';
+import { AddEmployee } from './AddEmployee';
 import AllPayout from './AllPayout';
+import Manage from './Manage';
 import MemberPayout from './MemberPayout';
 import './Oganization.css';
 
@@ -12,19 +14,21 @@ const Oganization: React.FC = () => {
   const history = useHistory();
   const { name } = useParams<{ name: string; }>();
 
-  const [addEmpoyee, setAddEmployee] = useState(false);
+  const [addEmployee, setAddEmployee] = useState(false);
   const [allPayout, setAllPayout] = useState(true);
   const [memberPayout, setMemberPayout] = useState(false);
+  const [manageEmployee, setManageEmployee] = useState(false);
 
   const reset = () =>{
-    setAddEmployee(false);
     setAllPayout(false);
     setMemberPayout(false);
+    setManageEmployee(false);
   }
   const appTasks = [
-    { title: 'Add Employee', set: setAddEmployee, null: reset, icon: addSharp },
+    { title: 'Add Employee', set: setAddEmployee, callBack: null, icon: addSharp },
     { title: 'Payout', set: setAllPayout, callBack: reset, icon: cardSharp },
-    { title: 'Payout to a Employee', set: setMemberPayout, callBack: reset, icon: cardOutline }
+    { title: 'Payout to a Employee', set: setMemberPayout, callBack: reset, icon: cardOutline },
+    { title: 'Manage Employee', set: setManageEmployee, callBack: reset, icon: peopleSharp }
   ];
   
   const appSettigns = [
@@ -41,18 +45,20 @@ const Oganization: React.FC = () => {
             <IonMenuButton />
           </IonButtons>
           <IonTitle>NIS Payment</IonTitle>
-          <IonTitle slot="end" onClick={()=>{
+          <IonTitle class="oganization-sign-out oganization-sign-out-hover" onClick={()=>{
             history.push(urlRouts.login);
-          }}>Sign Out</IonTitle>
+          }} slot="end">Sign Out</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonSplitPane contentId="main" class="oganization-splitpane">
       <Menu tasks={appTasks} settings={appSettigns}/> 
       <IonList id="main">
+        <AddEmployee state={addEmployee} onClose={()=>{setAddEmployee(false)}}/>
         <AllPayout state={allPayout}/>
         <MemberPayout state={memberPayout}/>
+        <Manage state={manageEmployee}/>
       </IonList>
-      </IonSplitPane> 
+      </IonSplitPane>
     </IonPage>
   );
 };

@@ -1,0 +1,28 @@
+.add-employee-sub-container{
+    margin: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--nis-color);
+}
+.add-employee-header{
+    margin-top: 20px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
+}
+.add-employee-item-containter{
+    margin: 10px;
+    border: 1px solid var(--nis-color);
+}
+.add-employee-button-containter{
+    margin-right: 20px;
+}
+.add-employee-button{
+    width: 80px;
+}
+.add-employee-error-container{
+    text-align: center;
+}
+
+@media screen and (max-width:767px){
+
+}

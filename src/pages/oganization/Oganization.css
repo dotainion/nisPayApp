@@ -4,3 +4,19 @@
 .oganization-splitpane{
     margin-top: 55px;
 }
+.oganization-sign-out{
+    position: absolute;
+    right: 0;
+    color: var(--nis-color);
+}
+.oganization-sign-out-hover:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+@media screen and (max-width:767px){
+    .oganization-splitpane{
+        display: block;
+    }
+}
+

@@ -1,13 +1,13 @@
 import { IonButtons, IonContent, IonHeader, IonLabel, IonList, IonMenuButton, IonPage, IonSplitPane, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
-import './MemberPayout.css';
+import './Manage.css';
 
-const MemberPayout = (props:any) => {
+const Manage = (props:any) => {
   return (
     <IonList hidden={!props.state}>
-        <IonLabel>Single payout comming soon</IonLabel>
+        <IonLabel>Manage comming soon</IonLabel>
     </IonList>
   );
 };
 
-export default MemberPayout;
+export default Manage;

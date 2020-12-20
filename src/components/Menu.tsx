@@ -14,13 +14,13 @@ const Menu = (props:any) => {
           {props?.tasks?.map((appPage:any, index:any) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
-                <IonItem routerLink="#" onClick={()=>{
+                <IonItem class="menu-items" routerLink="#" onClick={()=>{
                   if (appPage.set){
                     if (appPage.callBack) appPage.callBack();
                     appPage.set(true);
                   }
                 }} lines="none">
-                  <IonIcon slot="start" icon={appPage.icon} />
+                  <IonIcon class="menu-icon" slot="start" icon={appPage.icon} />
                   <IonLabel>{appPage.title}</IonLabel>
                 </IonItem>
               </IonMenuToggle>
@@ -33,13 +33,13 @@ const Menu = (props:any) => {
           {props?.settings?.map((setting:any, index:any) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
-                <IonItem routerLink="#" onClick={()=>{
+                <IonItem class="menu-items" routerLink="#" onClick={()=>{
                   if (setting.set){
                     if (setting.callBack) setting.callBack();
                     setting.set(true);
                   }
                 }} lines="none">
-                  <IonIcon slot="start" icon={setting.icon} />
+                  <IonIcon class="menu-icon" slot="start" icon={setting.icon} />
                   <IonLabel>{setting.title}</IonLabel>
                 </IonItem>
               </IonMenuToggle>

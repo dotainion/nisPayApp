@@ -9,18 +9,47 @@
     font-size: 25px;
     font-weight: bold;
 }
+.all-payout-list-header-info-container{
+    position: relative;
+    font-size: 20px;
+    color: white;
+    background-color: var(--nis-color);
+}
+.all-payout-list-header-name{
+    display: inline;  
+    padding-left: 5px;             
+}
+.all-payout-list-header-salary{
+    position: absolute;
+    display: inline;    
+    right: 31%; 
+}
+.all-payout-list-header-percentage{
+    position: absolute;
+    display: inline;
+    right: 4%;
+}
 .all-payout-member-list-container{
     width: 50%;
 }
 .all-payout-member-list{
     height: 70vh;
     overflow: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 1px solid gray;
+    border: 1px solid var(--nis-color);
 }
 .all-payout-payment-container{
-    width: 50px;
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+.all-payout-payment-sub-container{
+    position: relative;
+    width: 100%;
+    margin-top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border: 1px solid var(--nis-color);
 }
 .all-payment-delete{
     color: orangered;
@@ -68,16 +97,27 @@
     border: 2px solid lightgray;
     background-color: skyblue;
 }
+.all-payout-item-container{
+    padding-left: 3px;
+    border-bottom: 1px solid lightgray;
+    background-color: rgb(248, 246, 246);
+}
 .all-payment-name{
-    width: 80%;
     border: none;
-    background-color: inherit;
 }
 .all-payment-amount{
     width: 20%;
     float: right;
     border: none;
-    background-color: inherit;
+    padding-left: 2px;
+    background-color: rgb(215, 215, 236);
+}
+.all-payment-percentage{
+    width: 20%;
+    float: right;
+    border: none;
+    padding-left: 2px;
+    background-color: rgb(212, 236, 212);
 }
 .all-payment-checkbox{
     position: absolute;
@@ -91,5 +131,22 @@
 .all-payout-focus:focus{
     outline: none;
 }
+.all-payout-info{
+    margin-top: -100px;
+    color: red;
+    font-weight: bold;
+}
 
+@media screen and (max-width:767px){
+    .all-payout-container{
+        display: block;
+        margin-right: 10px;
+    }
+    .all-payout-member-list-container{
+        width: 100%;
+    }
+    .all-payout-payment-container{
+        width: 100%;
+    }
+}
 
